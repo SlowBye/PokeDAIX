@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PokeDAIX/static/css/main.964fdded.css",
-    "main.js": "/PokeDAIX/static/js/main.516e94f0.js",
+    "main.js": "/PokeDAIX/static/js/main.3ca1900d.js",
     "static/js/453.2f889831.chunk.js": "/PokeDAIX/static/js/453.2f889831.chunk.js",
     "index.html": "/PokeDAIX/index.html",
     "main.964fdded.css.map": "/PokeDAIX/static/css/main.964fdded.css.map",
-    "main.516e94f0.js.map": "/PokeDAIX/static/js/main.516e94f0.js.map",
+    "main.3ca1900d.js.map": "/PokeDAIX/static/js/main.3ca1900d.js.map",
     "453.2f889831.chunk.js.map": "/PokeDAIX/static/js/453.2f889831.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.516e94f0.js"
+    "static/js/main.3ca1900d.js"
   ]
 }
