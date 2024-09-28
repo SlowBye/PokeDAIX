@@ -36,9 +36,15 @@ export default function DrawerComponent({ onFilterChange }) {
     };
 
     // Effectuer un tri sur les données lorsqu'un filtre est appliqué
-    useEffect(() => {
-        onFilterChange({ types: selectedTypes, eggGroups: selectedEggGroups });
-    }, [selectedTypes, selectedEggGroups, onFilterChange]);
+useEffect(() => {
+    if (onFilterChange) {
+        onFilterChange({
+            types: selectedTypes || [], // Assure-toi que selectedTypes est toujours un tableau
+            eggGroups: selectedEggGroups || [], // Assure-toi que selectedEggGroups est toujours un tableau
+        });
+    }
+}, [selectedTypes, selectedEggGroups, onFilterChange]);
+
 
     const handleCheckboxChange = (event) => {
         const { name, checked } = event.target;
@@ -51,7 +57,7 @@ export default function DrawerComponent({ onFilterChange }) {
     };
 
     return (
-        <div className="DrawerComponent" style={{backgroundColor:'black'}}>
+        <div className="DrawerComponent">
             <CssBaseline />
             <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
                 <Toolbar>
@@ -62,13 +68,13 @@ export default function DrawerComponent({ onFilterChange }) {
             </AppBar>
             <Drawer
                 variant="permanent"
-                sx={{width: drawerWidth, flexShrink: 0, [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },backgroundColor:'black'}}
+                sx={{width: drawerWidth, flexShrink: 0, [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box',backgroundColor: ' #ff3333 ' }}}
             >
                 <Toolbar />
-                <Box sx={{ overflow: 'auto', backgroundColor: '#f5f5f5' }}>
+                <Box sx={{ overflow: 'auto', backgroundColor: ' #ff3333  '  }}>
                     <List>
                         {/* Accordion pour "Type" */}
-                        <Accordion>
+                        <Accordion sx={{backgroundColor:' #73ff2c '}}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="type-content"
@@ -96,7 +102,7 @@ export default function DrawerComponent({ onFilterChange }) {
                         </Accordion>
 
                         {/* Accordion pour "Groupe œuf" */}
-                        <Accordion>
+                        <Accordion sx={{backgroundColor:' #33f6ff  '}}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="egg-group-content"

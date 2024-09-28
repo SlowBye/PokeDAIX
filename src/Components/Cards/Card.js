@@ -3,7 +3,11 @@ import { Card, CardMedia, CardContent, Typography, Grid } from '@mui/material';
 
 const Cards = ({ pokemonData }) => {
     // Exclure le premier Pokémon de la liste
-    const filteredPokemonData = pokemonData.slice(1);
+    const filteredPokemonData = pokemonData;
+
+    if(filteredPokemonData.length === 0) {
+        return <Typography variant="h5" component="div">Aucun Pokémon trouvé</Typography>;
+    }
 
     return (
         <Grid container spacing={2}>

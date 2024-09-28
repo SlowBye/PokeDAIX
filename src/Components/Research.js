@@ -13,7 +13,7 @@ export default function Research({ searchTerm, setSearchTerm }) {
     };
 
     return (
-        <div className="Research" style={{ marginTop: '5%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="Research" style={{ marginTop: '5%', display: 'flex', justifyContent: 'center', alignItems: 'center',marginBottom:'3%' }}>
             <TextField
                 label="Rechercher un Pokémon"
                 variant="outlined"
